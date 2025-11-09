@@ -64,9 +64,9 @@ function showRoundResult() {
   currentRound++;
 
   if (currentRound <= totalRounds) {
-    setTimeout(() => nextRound(), 3000);
+    setTimeout(() => nextRound(), 2000);
   } else {
-    setTimeout(() => showFinalResults(), 3000);
+    setTimeout(() => showFinalResults(), 2000);
     element.textContent="";
   }
 }
