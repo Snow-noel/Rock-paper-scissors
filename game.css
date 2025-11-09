@@ -1,5 +1,5 @@
 body {
-    background: url(pics/pic1.jpg)center/cover no-repeat;
+    background: url(..pics/pic1.jpg)center/cover no-repeat;
     color: white;
     font-family: sans-serif;
     height: 100vh;
