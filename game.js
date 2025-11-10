@@ -8,10 +8,12 @@ let player2Choice = '';
 
 function createButtons(player, func) {
   main.innerHTML = '';
-
+  const gamename=document.createElement('h1');
   const h1 = document.createElement('h1');
   h1.textContent = `Round ${currentRound} its ${player}'s turn`;
   h1.style.textAlign = 'center';
+  gamename.textContent="Rock Paper Scissors"
+  gamename.style.textAlign="center";
 
   const h3 = document.createElement('h3');
   h3.textContent = 'Please select your choice';
@@ -27,7 +29,7 @@ function createButtons(player, func) {
     btn.addEventListener('click', () => func(choice.toLowerCase()));
     buttonDiv.appendChild(btn);
   });
-
+  main.append(gamename);
   main.appendChild(h1);
   main.appendChild(h3);
   main.appendChild(buttonDiv);
