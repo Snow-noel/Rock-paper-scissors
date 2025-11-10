@@ -2,7 +2,7 @@ const main = document.querySelector('.main');
 let player1Score = 0;
 let player2Score = 0;
 let currentRound = 1;
-let totalRounds = 5;
+let totalRounds = 3;
 let player1Choice = '';
 let player2Choice = '';
 
@@ -93,15 +93,21 @@ function showFinalResults() {
   winner.style.textAlign = 'center';
 
   if (player1Score > player2Score) {
-    winner.textContent = '🏆 Player 1 is the overall winner!';
+    winner.textContent = ' Player 1 is the overall winner!';
   } else if (player2Score > player1Score) {
-    winner.textContent = '🏆 Player 2 is the overall winner!';
-  } else {
-    winner.textContent = '🤝 It\'s a tie overall!';
+    winner.textContent = ' Player 2 is the overall winner!';
+  } else {const restartButton=document.createElement('button')
+    winner.textContent = 'It\'s a tie overall!';
   }
-
+  const restartButton=document.createElement('button');
+  restartButton.textContent="Restart Game";
+  restartButton.setAttribute("class","restart");
+  restartButton.addEventListener("click",()=>{
+    startGame();
+  })
   main.appendChild(finalScore);
   main.appendChild(winner);
+  main.append(restartButton);
 }
 
 function startGame() {
